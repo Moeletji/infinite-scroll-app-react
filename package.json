@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/Moeletji/infinite-scroll-app-react/issues"
   },
-  "homepage": "https://github.com/Moeletji/infinite-scroll-app-react#readme"
+  "homepage": "https://github.com/Moeletji/infinite-scroll-app-react#readme",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "concurrently": "^6.0.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^7.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
